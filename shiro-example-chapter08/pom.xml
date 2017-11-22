@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.xyzc1988</groupId>
-    <artifactId>shiro-example-chapter7</artifactId>
+    <artifactId>shiro-example-chapter08</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>shiro-example-chapter7</name>
+    <name>shiro-example-chapter08</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
@@ -82,7 +82,7 @@
 
     </dependencies>
     <build>
-        <finalName>shiro-example-chapter7</finalName>
+        <finalName>shiro-example-chapter08</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
