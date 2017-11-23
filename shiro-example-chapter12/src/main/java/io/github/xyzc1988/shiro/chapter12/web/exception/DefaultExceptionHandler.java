@@ -1,5 +1,6 @@
 package io.github.xyzc1988.shiro.chapter12.web.exception;
 
+import org.apache.shiro.authc.LockedAccountException;
 import org.apache.shiro.authz.UnauthorizedException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -23,6 +24,15 @@ public class DefaultExceptionHandler {
     @ExceptionHandler({UnauthorizedException.class})
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     public ModelAndView processUnauthenticatedException(NativeWebRequest request, UnauthorizedException e) {
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("exception", e);
+        mv.setViewName("unauthorized");
+        return mv;
+    }
+
+    @ExceptionHandler({LockedAccountException.class})
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    public ModelAndView processLockedAccountException(NativeWebRequest request, UnauthorizedException e) {
         ModelAndView mv = new ModelAndView();
         mv.addObject("exception", e);
         mv.setViewName("unauthorized");
